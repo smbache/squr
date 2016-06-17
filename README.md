@@ -71,7 +71,7 @@ sq_insert(into = "TableName", ~Foo, Bar = ~Baz , data = the_data)
 ```
 Unnamed values will use its R name as column name.
 
-It is also possible to use an "insert paramater" in a query, which is then 
+It is also possible to use an "insert parameter" in a query, which is then 
 set with `sq_set_insert`. These parameters are of the form `@Label:insert`:
 
 ```SQL
@@ -163,7 +163,7 @@ result <-
   sq_file("customers") %>% 
   sq_set(DateFrom = Sys.Date() - 10, 
          DateTo   = Sys.Date(), 
-         Feature  = sq_value(Feature = sq_value("Turnover", quote = "[")) %>% 
+         Feature  = sq_value("Turnover", quote = "[")) %>% 
   sq_send(with = rodbc)
 ```
 
