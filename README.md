@@ -78,11 +78,18 @@ set with `sq_set_insert`. These parameters are of the form `@Label:insert`:
 -- Suppose the SQL query in query.sql is:
 BEGIN TRANSACTION;
 
+DECLARE @Deleted INT
+
 DELETE 
   FROM TheTable 
  WHERE Foo = @Foo
 
+SELECT @Deleted = @@ROWCOUNT
+
 @NewObs:insert
+
+SELECT @Deleted AS Deleted
+     , @@ROWCOUNT AS Inserted
 
 COMMIT TRANSACTION;
 ```
