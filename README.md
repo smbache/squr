@@ -1,7 +1,7 @@
 # squr [/'skju:əɹ/]: 
 ## Structured Query Utility for R
 
-The `squr` (say "skewer") package  Provides a set of tools
+The `squr` (pronounced "skewer") package provides a set of tools
 for managing structured query language (SQL) files in R projects.
 It promotes the separation of logic and query scripts and eases the process
 of reading, parameterizing, and composing SQL queries.
