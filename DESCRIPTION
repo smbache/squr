@@ -1,0 +1,19 @@
+Package: squr
+Title: Structured Query Utility for R
+Version: 0.0.1
+Authors@R: person("Stefan Milton", "Bache", email = "stefan@stefanbache.dk", role = c("aut", "cre"))
+Description: squr (pronounce 'skewer' /'skju:əɹ/)pProvides a set of tools
+  for managing structured query language (SQL) files in R projects.
+  It promotes the separation of logic and query scripts and eases the process
+  of reading, parameterizing, and composing SQL queries.
+Depends:
+    R (>= 3.0.0)
+Imports:
+    magrittr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
