@@ -56,7 +56,7 @@ sql <- sq_file("path/query")
 Note: 
 
 * the `.sql` extension can be omitted,
-* when packaged, the path is relative to the `inst` folder.
+* when packaged, the path is relative to the `inst`allation folder.
 
 For the rare occation, there is also `sq_text`, which is the 
 way to add inline SQL. Both `sq_file` and `sq_text` produces
