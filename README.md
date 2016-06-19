@@ -1,4 +1,4 @@
-![squr-hex](./import.png?raw=true "squr logo")
+![squr-hex](./squr-hex.png?raw=true "squr logo")
 # squr [/'skju:əɹ/]: 
 ## Structured Query Utility for R
 
