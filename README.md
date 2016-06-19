@@ -103,6 +103,12 @@ result <-
   sq_send(with = rodbc)
 ```
 
+The default behaviour is to treat the `...` as *names* of values to insert.
+To insert values directly/as-is use `I()` function:
+```R
+sq_insert("Table", colnames(the_data), Ten = I(10), data = head(the_data))
+```
+
 ## Includes
 Sometimes it is useful to be able to use the same SQL snippets in several queries, 
 e.g. some Common Table Expressions (CTE) that are used several places. 
@@ -191,7 +197,4 @@ SELECT *
 
 The above then is a complete working example in an SQL IDE, and the 
 variable declarations are ignored in R.
-
-
-
 
