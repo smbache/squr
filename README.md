@@ -9,7 +9,10 @@ of reading, parameterizing, and composing SQL queries.
 ## Example
 
 In the following example the `sql/query.sql` file is read and
-parameterized, and sent.
+parameterized, and sent. There is no database connectivivty in `squr`,
+this is left fully flexible and out of scope. There is a `sq_send` 
+function, but this is only meant as a wrapper for invoking some 
+actual query function.
 
 ```R
 # Simple example of a query function wrapper. This part varies depending
