@@ -127,6 +127,8 @@ the `sq_set_include`. Example:
 
 ```SQL
 -- specific.sql
+@CTE:include
+
 SELECT *
   FROM OtherTable o
  INNER JOIN SomeTable s
@@ -136,7 +138,7 @@ SELECT *
 ```R
 sql <- 
   sq_file("specific") %>% 
-  sq_set_include("shared") %>% 
+  sq_set_include("CTE", "shared") %>% 
   sq_set(This = this, That = that) 
 ```
 
