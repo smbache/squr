@@ -6,14 +6,14 @@
 #'
 #' @param into The name of the table to insert into.
 #' @param ... Names of the values to insert, either as character or one-sided formulas.
+#'   It is also possible to specify \code{AsIs} variables by wrapping the value in \code{I(.)}.
 #' @param data Data or environment to lookup the names.
 #' @param split integer specifying the maximum number of value-pairs in each \code{INSERT} block.
 #'
 #' @export
 sq_insert <- function(into, ..., data = parent.frame(), split = 999)
 {
-  dots <- unlist(list(...))
-
+  dots <- leaf_nodes(list(...))
 
   if (length(dots) == 0 && is.list(data)) {
     dots <- names(data)
@@ -49,14 +49,3 @@ sq_insert <- function(into, ..., data = parent.frame(), split = 999)
   Reduce(`+`, statements)
 }
 
-as_symbol <- function(value)
-{
-  if (inherits(value, "AsIs"))
-    value
-  else if (inherits(value, "formula") && length(value) == 2)
-    value[[2L]]
-  else if (is_scalar_character(value))
-    as.symbol(value)
-  else
-    stop("Cannot coerce to a symbol.")
-}

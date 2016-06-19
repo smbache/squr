@@ -9,7 +9,8 @@ sq_insert(into, ..., data = parent.frame(), split = 999)
 \arguments{
 \item{into}{The name of the table to insert into.}
 
-\item{...}{Names of the values to insert, either as character or one-sided formulas.}
+\item{...}{Names of the values to insert, either as character or one-sided formulas.
+It is also possible to specify \code{AsIs} variables by wrapping the value in \code{I(.)}.}
 
 \item{data}{Data or environment to lookup the names.}
 

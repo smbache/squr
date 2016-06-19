@@ -4,6 +4,7 @@
 #' @param into The name of the table to insert into.
 #' @param label the insert block label.
 #' @param ... Names of the values to insert, either as character or one-sided formulas.
+#'   It is also possible to specify \code{AsIs} variables by wrapping the value in \code{I(.)}.
 #' @param data Data or environment to lookup the names.
 #' @param split integer specifying the maximum number of value-pairs in each \code{INSERT} block.
 #'
