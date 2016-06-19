@@ -198,3 +198,5 @@ SELECT *
 The above then is a complete working example in an SQL IDE, and the 
 variable declarations are ignored in R.
 
+## See also
+A similar (but different) project for Clojure (with ports for some other languages) by @krisajenkins is [Yesql](https://github.com/krisajenkins/yesql).
