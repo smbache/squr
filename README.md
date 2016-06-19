@@ -1,6 +1,5 @@
 ![squr-hex](./squr-hex.png?raw=true "squr logo")
-# squr [/'skju:əɹ/]: 
-## Structured Query Utility for R
+# squr [/'skju:əɹ/]: Structured Query Utility for R
 
 The `squr` (pronounced "skewer") package provides a set of tools
 for managing structured query language (SQL) files in R projects.
