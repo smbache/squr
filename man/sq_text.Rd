@@ -2,7 +2,7 @@
 % Please edit documentation in R/sq_text.R
 \name{sq_text}
 \alias{sq_text}
-\title{Read The Contents of an SQL File}
+\title{Inline SQL Query}
 \usage{
 sq_text(text)
 }
@@ -13,6 +13,6 @@ sq_text(text)
 An \code{sq} object.
 }
 \description{
-Read The Contents of an SQL File
+Inline SQL Query
 }
 

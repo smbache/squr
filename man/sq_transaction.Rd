@@ -4,12 +4,12 @@
 \alias{sq_transaction}
 \title{Wrap SQL Queries in a Transaction}
 \usage{
-sq_transaction(..., name = "")
+sq_transaction(..., .name = "")
 }
 \arguments{
 \item{...}{\code{sq} objects.}
 
-\item{name}{Optional name for the transaction.}
+\item{.name}{Optional name for the transaction.}
 }
 \description{
 The provided queries are concatenated and wrapped in

@@ -4,14 +4,14 @@
 \alias{sq_set_include}
 \title{Parameterize Insert Parameters}
 \usage{
-sq_set_include(query, label, path)
+sq_set_include(.query, .label, .path)
 }
 \arguments{
-\item{query}{An \code{sq} query object.}
+\item{.query}{An \code{sq} query object.}
 
-\item{label}{the insert block label.}
+\item{.label}{the insert block label.}
 
-\item{path}{see \code{sq_file}. As alternative to a path, one can
+\item{.path}{see \code{sq_file}. As alternative to a path, one can
 also supply an \code{sq} object directly, which is used as is.}
 }
 \description{

@@ -4,21 +4,23 @@
 \alias{sq_insert}
 \title{Create an Insert Statment}
 \usage{
-sq_insert(into, ..., data = parent.frame(), split = 999)
+sq_insert(.into, ..., .data = parent.frame(), .split = 999)
 }
 \arguments{
-\item{into}{The name of the table to insert into.}
+\item{.into}{The name of the table to insert into.}
 
-\item{...}{Names of the values to insert, either as character or one-sided formulas.
-It is also possible to specify \code{AsIs} variables by wrapping the value in \code{I(.)}.}
+\item{...}{Names of the values to insert, either as character or one-sided
+formulas. It is also possible to specify \code{AsIs} variables by wrapping
+the value in \code{I(.)}.}
 
-\item{data}{Data or environment to lookup the names.}
+\item{.data}{Data or environment to lookup the names.}
 
-\item{split}{integer specifying the maximum number of value-pairs in each \code{INSERT} block.}
+\item{.split}{integer specifying the maximum number of value-pairs in each
+\code{INSERT} block.}
 }
 \description{
-Insert blocks are special parameters in \code{squr} and provide
-an easy way of constructing \code{INSERT INTO ... Values (...)} type constructs.
-They are marked in the SQL source with \code{@label:insert}.
+Insert blocks are special parameters in \code{squr} and provide an easy way
+of constructing \code{INSERT INTO ... Values (...)} type constructs. They are
+marked in the SQL source with \code{@label:insert}.
 }
 

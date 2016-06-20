@@ -1,12 +1,12 @@
 #' Parameterize an SQL Query
 #'
-#' @param query An \code{sq} object or a character string.
+#' @param .query An \code{sq} object or a character string.
 #' @param ... name-value pairs of named parameters.
 #'
 #' @details The values will be prepared with \code{sq_value}
 #'
 #' @export
-sq_set <- function(query, ...)
+sq_set <- function(.query, ...)
 {
   params <- lapply(list(...), sq_value)
   names <- names(params)
@@ -16,7 +16,7 @@ sq_set <- function(query, ...)
 
   sort_index <- order(nchar(names))
 
-  sq_set_(query, params[sort_index])
+  sq_set_(.query, params[sort_index])
 }
 
 #' Internal Recursive Parameterization Function

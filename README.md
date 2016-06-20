@@ -29,7 +29,7 @@ rodbc <- function(query)
 result <- 
   sq_file("sql/query") %>% 
   sq_set(Param = value) %>%
-  sq_send(with = rodbc)
+  sq_send(.with = rodbc)
 ```
 
 The corresponding `query.sql` file could look something like:
@@ -38,6 +38,9 @@ SELECT *
   FROM TheTable
  WHERE Param = @Param
 ```
+
+Note that many arguments in `squr` are prefixed with a dot; this is to
+avoid name clash with values in `...` arguments.
 
 ## Separation of logic and SQL Files
 It can be argued that it is good practice to keep query scripts separate
@@ -67,10 +70,10 @@ S3 objects which are character types with an additional class
 `INSERT` statements can be constructed easily with `sq_insert`:
 ```R
 # Use all column names as-is:
-sq_insert(into = "TableName", data = the_data)
+sq_insert(.into = "TableName", .data = the_data)
 
 # Manually specify values:
-sq_insert(into = "TableName", ~Foo, Bar = ~Baz , data = the_data)
+sq_insert(.into = "TableName", ~Foo, Bar = ~Baz , .data = the_data)
 ```
 Unnamed values will use its R name as column name.
 
@@ -102,14 +105,14 @@ Then the R code is, e.g.:
 result <-
   sq_file("sql/query") %>% 
   sq_set(Foo = Bar) %>% 
-  sq_set_insert("NewObs", into = "TableName", data = the_data) %>% 
-  sq_send(with = rodbc)
+  sq_set_insert("NewObs", .into = "TableName", .data = the_data) %>% 
+  sq_send(.with = rodbc)
 ```
 
 The default behaviour is to treat the `...` as *names* of values to insert.
 To insert values directly/as-is use `I()` function:
 ```R
-sq_insert("Table", colnames(the_data), Ten = I(10), data = head(the_data))
+sq_insert("Table", colnames(the_data), Ten = I(10), .data = head(the_data))
 ```
 
 ## Includes
@@ -156,7 +159,7 @@ insert <- sq_file("insert")
 result <-
   sq_transaction(update, insert) %>% 
   sq_set(Param = value) %>% 
-  sq_send(with = rodbc)
+  sq_send(.with = rodbc)
 ```
 
 ## Dynamic Table and Column Names
@@ -182,7 +185,7 @@ result <-
   sq_set(DateFrom = Sys.Date() - 10, 
          DateTo   = Sys.Date(), 
          Feature  = sq_value("Turnover", quote = "[")) %>% 
-  sq_send(with = rodbc)
+  sq_send(.with = rodbc)
 ```
 
 ## Alternative Parameter Specifications

@@ -4,10 +4,10 @@
 \alias{sq_set}
 \title{Parameterize an SQL Query}
 \usage{
-sq_set(query, ...)
+sq_set(.query, ...)
 }
 \arguments{
-\item{query}{An \code{sq} object or a character string.}
+\item{.query}{An \code{sq} object or a character string.}
 
 \item{...}{name-value pairs of named parameters.}
 }

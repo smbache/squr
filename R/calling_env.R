@@ -1,9 +1,14 @@
 #' Get the First (Non squr) Calling Environment
 #'
-#' @param frames A list of frames to search through, e.g. \code{sys.frames()}.
 #' @return Environment
 #' @noRd
-calling_env <- function(frames)
+calling_env <- function()
 {
-  rev(Filter(function(e) !identical(e, topenv()), lapply(c(.GlobalEnv, frames), topenv)))[[1]]
+  top        <- topenv(environment(calling_env))
+  frames     <- c(.GlobalEnv, sys.frames())
+  topenvs    <- lapply(frames, topenv)
+  is_squr    <- vapply(topenvs, function(e) identical(e, top), logical(1))
+  first_squr <- min(which(is_squr))
+
+  frames[[first_squr - 1]]
 }

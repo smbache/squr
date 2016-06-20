@@ -12,24 +12,19 @@ sq_file <- function(path)
   if (!is_scalar_character(path))
     stop("Argument 'path' should be a scalar character value")
 
-  path. <- `if`(grepl(".*\\.sql$", path, ignore.case = TRUE), path, paste0(path, ".sql"))
+  path.sql <- append_sql_extension(path)
 
-  pkg <- exists(".packageName", parent.frame(), mode = "character", inherits = TRUE)
 
-  if (isTRUE(pkg)) {
+  if (is_packaged()) {
 
-    pkg_name <- get(".packageName", envir    = calling_env(sys.frames()),
-                                    mode     = "character",
-                                    inherits = TRUE)
-
-    use_path <- system.file(path., package = pkg_name)
-
+    pkg_name <- package_name()
+    use_path <- system.file(path.sql, package = pkg_name)
     if (use_path == "")
-      stop(sprintf("The SQL file '%s' cannot be found in package '%s'", path., pkg_name))
+      stop(sprintf("The SQL file '%s' cannot be found in package '%s'", path.sql, pkg_name))
 
   } else {
 
-    use_path <- path.
+    use_path <- path.sql
 
   }
 
@@ -38,10 +33,8 @@ sq_file <- function(path)
   if (!file.exists(normalized))
     stop(sprintf("The SQL file '%s' cannot be found.", normalized))
 
-  sql_ <- paste(readLines(normalized, warn = FALSE), collapse = "\n")
-
-  # Remove --rignore blocks and multiple blank lines.
-  sql <- gsub("^(?:[\t ]*(?:\r?\n|\r))+", "", gsub("--rignore.*?--end", "", sql_), perl = TRUE)
+  sql <- read_sql_file(normalized)
 
   sq_text(sql)
 }
+

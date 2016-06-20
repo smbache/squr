@@ -1,4 +1,4 @@
-#' Read The Contents of an SQL File
+#' Inline SQL Query
 #'
 #' @param text A character SQL query.
 #'

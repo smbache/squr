@@ -19,14 +19,18 @@ sq_value <- function(value, quote = "'")
   right_quote <- switch(quote, "(" = ")", "{" = "}", "[" = "]", quote)
 
   if (is.list(value)) {
-    out <- paste0("(", paste(vapply(value, sq_value, character(1), quote = quote), collapse = ","), ")")
+
+    out <- paste0("(", paste(vapply(value, sq_value, character(1), quote = quote),
+                             collapse = ","), ")")
   } else {
+
     out <- rep("NULL", length(value))
     if (is.numeric(value)) {
       out[!is.na(value)] <- as.character(value)
     } else {
       out[!is.na(value)] <- paste0(quote, as.character(value), right_quote)
     }
+
   }
 
   structure(out, class = c("sq_value", "character"))

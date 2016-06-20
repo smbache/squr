@@ -4,12 +4,12 @@
 \alias{sq_send}
 \title{Send a Query}
 \usage{
-sq_send(query, with, ...)
+sq_send(.query, .with, ...)
 }
 \arguments{
-\item{query}{A character/sq query string.}
+\item{.query}{A character/sq query string.}
 
-\item{with}{function with which to send the query.}
+\item{.with}{function with which to send the query.}
 
 \item{...}{further parameters passed to \code{with}.}
 }
