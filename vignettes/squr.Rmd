@@ -1,12 +1,14 @@
----
-title: "squr: Structured Query Utility for R"
-author: "Stefan Milton Bache"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
+<!--
+  %\VignetteIndexEntry{Strucured Query Utility for R}
+  %\VignetteEngine{knitr}
   %\VignetteEncoding{UTF-8}
----
+-->
 
-Todo
+![squr](squr-header.png)
+
+*This version: June, 2016. Stefan Milton Bache.*
+
+
+# Introduction
+
+todo...

@@ -13,6 +13,8 @@ When used in a package, the path will be taken to be relative to the \code{inst}
 }
 \value{
 A \code{sql} object.
+
+\if{html}{\figure{squr-hex.png}{options: alt="squr logo"}}
 }
 \description{
 Read The Contents of an SQL File

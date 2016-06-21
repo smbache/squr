@@ -6,6 +6,8 @@
 #'
 #' @return A \code{sql} object.
 #'
+#' \if{html}{\figure{squr-hex.png}{options: alt="squr logo"}}
+#'
 #' @export
 sq_file <- function(path)
 {
