@@ -13,6 +13,9 @@ sq_send(.query, .with, ...)
 
 \item{...}{further parameters passed to \code{with}.}
 }
+\value{
+The value returned by \code{.with}
+}
 \description{
 Small function that invokes another given function for sending
 a query to the database. The benefit of using this wrapper is

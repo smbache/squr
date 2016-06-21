@@ -8,6 +8,9 @@
 #' @param .query A character/sq query string.
 #' @param .with function with which to send the query.
 #' @param ... further parameters passed to \code{with}.
+#'
+#' @return The value returned by \code{.with}
+#' @export
 sq_send <- function(.query, .with, ...)
 {
   .with(.query, ...)
