@@ -9,4 +9,9 @@ read_sql_file <- function(path, remove_ignored = TRUE)
 {
   content <- paste(readLines(path, warn = FALSE), collapse = "\n")
 
+  if (isTRUE(remove_ignored))
+    gsub("^(?:[\t ]*(?:\r?\n|\r))+", "", gsub("--rignore.*?--end", "", content), perl = TRUE)
+  else
+    content
+
 }
