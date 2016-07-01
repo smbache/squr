@@ -223,5 +223,11 @@ SELECT *
 The above then is a complete working example in an SQL IDE, and the 
 variable declarations are ignored in R.
 
+## A note on SQL injection
+While `squr::sq_value` does basic quoting, it does not eliminate 
+all risk of SQL injection attacks. Therefore, whenever the values
+originate from user input (e.g. in a Shiny/web application, or web services, etc),
+approprite precautions should be taken (type checking, whitelisting, etc.)
+
 ## See also
 A similar (but different) project for Clojure (with ports for some other languages) by @krisajenkins is [Yesql](https://github.com/krisajenkins/yesql).

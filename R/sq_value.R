@@ -28,7 +28,8 @@ sq_value <- function(value, quote = "'")
     if (is.numeric(value)) {
       out[!is.na(value)] <- as.character(value)
     } else {
-      out[!is.na(value)] <- paste0(quote, as.character(value), right_quote)
+      out[!is.na(value)] <-
+        paste0(quote, gsub("'", "''", value), right_quote)
     }
 
   }
