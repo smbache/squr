@@ -137,7 +137,7 @@ the `sq_set_include`. Example:
 
 SELECT *
   FROM OtherTable o
- INNER JOIN SomeTable s
+ INNER JOIN SomeData s
     ON o.This = s.That
 ```
 
