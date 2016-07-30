@@ -61,7 +61,7 @@ Note:
 * the `.sql` extension can be omitted,
 * when packaged, the path is relative to the `inst`allation folder.
 
-For the rare occation, there is also `sq_text`, which is the 
+For the rare occasion, there is also `sq_text`, which is the 
 way to add inline SQL. Both `sq_file` and `sq_text` produces
 S3 objects which are character types with an additional class
 `sq` to enable a few methods (`print` and `+`).
