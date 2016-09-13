@@ -21,7 +21,7 @@ rodbc <- function(query)
 {
   ch <- RODBC::odbcDriverConnect("<connectionstring>")
   on.exit(RODBC::odbcClose(ch))
-  RODBC::sqlQuery(query)
+  RODBC::sqlQuery(ch, query)
 }
 
 # Example of reading file, setting a parameter value, and sending the query,
