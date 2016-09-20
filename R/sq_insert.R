@@ -13,7 +13,7 @@
 #'   \code{INSERT} block.
 #'
 #' @export
-sq_insert <- function(.into, ..., .data = parent.frame(), .split = 999)
+sq_insert <- function(.into, ..., .data = parent.frame(), .split = 75)
 {
   dots <- leaf_nodes(list(...))
 
@@ -52,6 +52,6 @@ sq_insert <- function(.into, ..., .data = parent.frame(), .split = 999)
   statements <-
     lapply(value_strings, function(vs) sq_text(INTO + paste("VALUES", vs)))
 
-  Reduce(`+`, statements)
+  sq_text(paste(statements, collapse = "\n"))
 }
 

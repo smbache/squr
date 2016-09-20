@@ -10,5 +10,5 @@ sq_text <- function(text)
   if (!is_scalar_character(text))
     stop("Argument 'text' should be a scalar character value")
 
-  structure(text, class = "sq")
+  structure(text, class = c("sq", "sql", "character"))
 }

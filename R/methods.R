@@ -43,5 +43,5 @@ print.sq_value <- function(x, ...)
 #' @export
 `+.sq` <- function(e1, e2)
 {
-  structure(paste(e1, e2, sep = "\n"), class = c("sq", "character"))
+  sq_text(paste(e1, e2, sep = "\n"))
 }

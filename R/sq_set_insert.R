@@ -11,7 +11,7 @@
 #' @details The values will be prepared with \code{sq_value}
 #'
 #' @export
-sq_set_insert <- function(.query, .label, .into, ..., .data = parent.frame(), .split = 999)
+sq_set_insert <- function(.query, .label, .into, ..., .data = parent.frame(), .split = 75)
 {
   insert <- sq_insert(.into, ..., .data = .data, .split = .split)
 
