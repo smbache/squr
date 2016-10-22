@@ -224,10 +224,10 @@ The above then is a complete working example in an SQL IDE, and the
 variable declarations are ignored in R.
 
 ## A note on SQL injection
-While `squr::sq_value` does basic quoting, it *does not eliminate 
-all risk of SQL injection attacks*. Therefore, whenever the values
+The `squr::sq_value` function uses `DBI::sqlInterpolate` to parse values.
+However, whenever the values
 originate from user input (e.g. in a Shiny/web application, or web services, etc),
-approprite precautions should be taken (type checking, whitelisting, etc.) 
+approprite precautions should still be taken (type checking, whitelisting, etc.) 
 
 OWASP has some [good guidelines](https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet)
 on how to prevent SQL injection in your applications.
