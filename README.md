@@ -197,7 +197,7 @@ EXEC MyStoredProcedure @Param1 = @Param1, @Param2 = @Param2
 ```
 
 Here, `@Param*` on both sides of the equality signs will be replaced! Therefore `squr` has
-the convension: if `@_Param` exists (with the underscore) this will be replaced and `@Param` will
+the convention: if `@_Param` exists (with the underscore) this will be replaced and `@Param` will
 not. The R call is the same, i.e. one would use `sq_set(Param = value)`.
 
 ```
