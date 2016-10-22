@@ -4,7 +4,7 @@
 \alias{sq_insert}
 \title{Create an Insert Statment}
 \usage{
-sq_insert(.into, ..., .data = parent.frame(), .split = 999)
+sq_insert(.into, ..., .data = parent.frame(), .split = 75)
 }
 \arguments{
 \item{.into}{The name of the table to insert into.}

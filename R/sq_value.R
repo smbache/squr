@@ -7,16 +7,15 @@
 #'
 #' @param value A value to be used in an SQL query.
 #' @param quote The character to be used to quote the (non-numeric) value(s).
+#'   Can be one of '[', '"', and "'".
 #'   For brackets, use the opening bracket.
 #' @return character: A character representation appropriate for SQL queries.
 #'
 #' @export
-sq_value <- function(value, quote = "'")
+sq_value <- function(value, quote = NULL)
 {
   if (inherits(value, "sq_value"))
     return(value)
-
-  right_quote <- switch(quote, "(" = ")", "{" = "}", "[" = "]", quote)
 
   if (is.list(value)) {
 
@@ -25,11 +24,14 @@ sq_value <- function(value, quote = "'")
   } else {
 
     out <- rep("NULL", length(value))
-    if (is.numeric(value)) {
-      out[!is.na(value)] <- as.character(value)
-    } else {
-      out[!is.na(value)] <-
-        paste0(quote, gsub("'", "''", value), right_quote)
+    available <- !is.na(value)
+
+    if (any(available)) {
+      if (is.numeric(value)) {
+        out[available] <- as.character(value[available])
+      } else {
+        out[available] <- dbi_interpolate(as.character(value[available]), quote)
+      }
     }
 
   }

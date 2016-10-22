@@ -5,7 +5,7 @@
 \title{Parameterize Insert Parameters}
 \usage{
 sq_set_insert(.query, .label, .into, ..., .data = parent.frame(),
-  .split = 999)
+  .split = 75)
 }
 \arguments{
 \item{.query}{An \code{sq} query object.}

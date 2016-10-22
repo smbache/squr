@@ -4,12 +4,13 @@
 \alias{sq_value}
 \title{Prepare Value for an SQL Query}
 \usage{
-sq_value(value, quote = "'")
+sq_value(value, quote = NULL)
 }
 \arguments{
 \item{value}{A value to be used in an SQL query.}
 
 \item{quote}{The character to be used to quote the (non-numeric) value(s).
+Can be one of '[', '"', and "'".
 For brackets, use the opening bracket.}
 }
 \value{
