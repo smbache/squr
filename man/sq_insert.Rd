@@ -4,7 +4,7 @@
 \alias{sq_insert}
 \title{Create an Insert Statment}
 \usage{
-sq_insert(.into, ..., .data = parent.frame(), .split = 75)
+sq_insert(.into, ..., .data = parent.frame(), .split = 75, .quote = "[")
 }
 \arguments{
 \item{.into}{The name of the table to insert into.}
@@ -17,6 +17,8 @@ the value in \code{I(.)}.}
 
 \item{.split}{integer specifying the maximum number of value-pairs in each
 \code{INSERT} block.}
+
+\item{.quote}{The quote to use for table and column names.}
 }
 \description{
 Insert blocks are special parameters in \code{squr} and provide an easy way

@@ -7,13 +7,14 @@
 #'   It is also possible to specify \code{AsIs} variables by wrapping the value in \code{I(.)}.
 #' @param .data Data or environment to lookup the names.
 #' @param .split integer specifying the maximum number of value-pairs in each \code{INSERT} block.
+#' @param .quote the quote to use for table and column names.
 #'
 #' @details The values will be prepared with \code{sq_value}
 #'
 #' @export
-sq_set_insert <- function(.query, .label, .into, ..., .data = parent.frame(), .split = 75)
+sq_set_insert <- function(.query, .label, .into, ..., .data = parent.frame(), .split = 75, .quote = "[")
 {
-  insert <- sq_insert(.into, ..., .data = .data, .split = .split)
+  insert <- sq_insert(.into, ..., .data = .data, .split = .split, .quote = .quote)
 
   pattern <- paste0("@", .label, ":insert(?![[:alnum:]_#\\$\\@:])")
 

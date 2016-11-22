@@ -11,9 +11,10 @@
 #' @param .data Data or environment to lookup the names.
 #' @param .split integer specifying the maximum number of value-pairs in each
 #'   \code{INSERT} block.
+#' @param .quote The quote to use for table and column names.
 #'
 #' @export
-sq_insert <- function(.into, ..., .data = parent.frame(), .split = 75)
+sq_insert <- function(.into, ..., .data = parent.frame(), .split = 75, .quote = "[")
 {
   dots <- leaf_nodes(list(...))
 
@@ -29,8 +30,8 @@ sq_insert <- function(.into, ..., .data = parent.frame(), .split = 75)
   names[names == ""] <- lapply(symbols[names == ""], as.character)
 
   INTO <- sq_set(sq_text("INSERT INTO @Into @Columns"),
-                         Into    = sq_value(.into, ""),
-                         Columns = sq_value(as.list(names), ""))
+                         Into    = sq_value(.into, "["),
+                         Columns = sq_value(as.list(names), "["))
 
   enclos <- calling_env()
 

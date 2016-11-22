@@ -5,7 +5,7 @@
 \title{Parameterize Insert Parameters}
 \usage{
 sq_set_insert(.query, .label, .into, ..., .data = parent.frame(),
-  .split = 75)
+  .split = 75, .quote = "[")
 }
 \arguments{
 \item{.query}{An \code{sq} query object.}
@@ -20,6 +20,8 @@ It is also possible to specify \code{AsIs} variables by wrapping the value in \c
 \item{.data}{Data or environment to lookup the names.}
 
 \item{.split}{integer specifying the maximum number of value-pairs in each \code{INSERT} block.}
+
+\item{.quote}{the quote to use for table and column names.}
 }
 \description{
 Parameterize Insert Parameters
