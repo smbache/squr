@@ -30,8 +30,8 @@ sq_insert <- function(.into, ..., .data = parent.frame(), .split = 75, .quote = 
   names[names == ""] <- lapply(symbols[names == ""], as.character)
 
   INTO <- sq_set(sq_text("INSERT INTO @Into @Columns"),
-                         Into    = sq_value(.into, "["),
-                         Columns = sq_value(as.list(names), "["))
+                         Into    = sq_value(.into, .quote),
+                         Columns = sq_value(as.list(names), .quote))
 
   enclos <- calling_env()
 
