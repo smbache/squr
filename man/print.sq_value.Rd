@@ -14,4 +14,3 @@
 \description{
 S3 Print Method for 'sq_value' Objects
 }
-

@@ -11,4 +11,3 @@ The pipe operator is imported from \code{magrittr}, see
 \code{\link[magrittr]{\%>\%}} for more details.
 }
 \keyword{internal}
-

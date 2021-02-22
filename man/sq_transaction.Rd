@@ -15,4 +15,3 @@ sq_transaction(..., .name = "")
 The provided queries are concatenated and wrapped in
 \code{BEGIN TRANSACTION ... COMMIT TRANSACTION}.
 }
-

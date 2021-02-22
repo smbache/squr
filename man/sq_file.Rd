@@ -17,4 +17,3 @@ A \code{sql} object.
 \description{
 Read The Contents of an SQL File
 }
-

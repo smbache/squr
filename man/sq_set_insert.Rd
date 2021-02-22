@@ -4,8 +4,15 @@
 \alias{sq_set_insert}
 \title{Parameterize Insert Parameters}
 \usage{
-sq_set_insert(.query, .label, .into, ..., .data = parent.frame(),
-  .split = 75, .quote = "[")
+sq_set_insert(
+  .query,
+  .label,
+  .into,
+  ...,
+  .data = parent.frame(),
+  .split = 75,
+  .quote = "["
+)
 }
 \arguments{
 \item{.query}{An \code{sq} query object.}
@@ -29,4 +36,3 @@ Parameterize Insert Parameters
 \details{
 The values will be prepared with \code{sq_value}
 }
-

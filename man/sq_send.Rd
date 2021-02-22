@@ -22,4 +22,3 @@ a query to the database. The benefit of using this wrapper is
 to keep database/driver boilerplate code separate from functions
 that sends queries.
 }
-

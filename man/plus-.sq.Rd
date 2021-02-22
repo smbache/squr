@@ -17,4 +17,3 @@ An \code{sq} object.
 \description{
 Concatenate two sq chunks, separated by two line breaks.
 }
-

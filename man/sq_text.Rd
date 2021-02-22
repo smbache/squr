@@ -15,4 +15,3 @@ An \code{sq} object.
 \description{
 Inline SQL Query
 }
-
