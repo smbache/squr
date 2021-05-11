@@ -6,7 +6,7 @@ output:
 vignette: >
   %\VignetteIndexEntry{squr: Structured Query Utility for R}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\usepackage[utf8]{inputenc}
 ---
 
 ![squr](squr-header.png)
