@@ -20,4 +20,3 @@ Parameterize Insert Parameters
 \details{
 The values will be prepared with \code{sq_value}
 }
-

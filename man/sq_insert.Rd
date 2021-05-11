@@ -25,4 +25,3 @@ Insert blocks are special parameters in \code{squr} and provide an easy way
 of constructing \code{INSERT INTO ... Values (...)} type constructs. They are
 marked in the SQL source with \code{@label:insert}.
 }
-

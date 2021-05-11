@@ -25,4 +25,3 @@ Prepare Value for an SQL Query
  are wrapped in parentheses and values are separated with commas. The \code{quote} parameter
  is useful for dynamically specifying e.g. columns, or table names.
 }
-

@@ -1,8 +1,13 @@
-<!--
-  %\VignetteIndexEntry{Strucured Query Utility for R}
-  %\VignetteEngine{knitr}
-  %\VignetteEncoding{UTF-8}
--->
+---
+title: "squr: Structured Query Utility for R"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{squr: Structured Query Utility for R}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\usepackage[utf8]{inputenc}
+---
 
 ![squr](squr-header.png)
 

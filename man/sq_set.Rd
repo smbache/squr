@@ -17,4 +17,3 @@ Parameterize an SQL Query
 \details{
 The values will be prepared with \code{sq_value}
 }
-

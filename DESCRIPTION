@@ -14,7 +14,10 @@ Imports:
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 5.0.1
-Suggests: knitr,
-    rmarkdown
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Suggests:
+    knitr,
+    rmarkdown,
+    markdown
 VignetteBuilder: knitr
